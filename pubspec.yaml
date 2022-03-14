@@ -1,6 +1,6 @@
 name: adaptive_thom_dev
-description: Adaptive android & IOS.
-version: 0.0.1
+description: Adaptive platform android & IOS. Change scaffold, text, button and alert.
+version: 1.0.0
 homepage: https://github.com/Web82-Thom/my_1er_pack
 
 environment:
