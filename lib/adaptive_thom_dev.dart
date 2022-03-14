@@ -1,7 +1,5 @@
 library adaptive_thom_dev;
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
@@ -52,6 +50,7 @@ class Adaptive {
     return TextButton(onPressed: onPressed, child: child!);
   }
 
+  // ignore: non_constant_identifier_names
   static AndroidErrorAlert({@required BuildContext? context, @required VoidCallback? onPressed }){
    return AlertDialog(
         content: Column(
@@ -63,7 +62,7 @@ class Adaptive {
       actions: <Widget>[
         button(
           child: 
-          text(string: "OK"), 
+          text(string: "OK", color: Colors.green), 
           onPressed: onPressed
         )
       ],
@@ -96,7 +95,7 @@ class Adaptive {
         ],
       ),
       actions: <Widget>[
-        button(child: text(string: "OK"), onPressed: onPressed)
+        button(child: text(string: "OK", color: Colors.orange), onPressed: onPressed)
 
       ],
     );

@@ -40,10 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
           Adaptive.text(string:" ${Adaptive.isIOS()}", color: Colors.red),
           Adaptive.button(
-            child: Adaptive.text(string:"Press Me"), 
+            child: Adaptive.text(string:"Press Me", color: Colors.green), 
             onPressed: (){
               Adaptive.alert(context: context,callback: (){
-                print("Succes");
                 Navigator.of(context).pop();
               });
             } 
