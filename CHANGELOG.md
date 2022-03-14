@@ -1,3 +1,4 @@
-## 0.0.1
+## [0.0.1] - 2022-03-14
 
-* TODO: Describe initial release.
+* Create initial package
+* Destiny for learn how to create a package
