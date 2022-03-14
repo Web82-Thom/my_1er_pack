@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:my_1er_pack/my_1er_pack.dart';
+import 'package:my_1er_pack/adaptive_ThomDev.dart';
 
 void main() {
   test('adds one to input values', () {

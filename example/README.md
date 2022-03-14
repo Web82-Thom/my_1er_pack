@@ -1,8 +1,15 @@
-# example
+# Adaptive ThomDev
 
-A new Flutter project.
+Adapation à la plateform utilisé android ou ios.
+Ce package est destiné à la création d'apllication [Flutter](https://flutter.io)
 
 ## Getting Started
+
+Pour utilisé ce package, ajouter au 'pubspec.yam' :
+``` yaml
+dependencies:
+    my_1er_pack:^0.0.1
+```
 
 This project is a starting point for a Flutter application.
 

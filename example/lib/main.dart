@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_1er_pack/my_1er_pack.dart';
+import 'package:adaptive_ThomDev/adaptive_ThomDev.dart';
 void main() {
   runApp(const MyApp());
 }
