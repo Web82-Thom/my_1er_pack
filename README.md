@@ -3,9 +3,9 @@
 Adapation à la plateform utilisé android ou ios.
 Ce package est destiné à la création d'apllication [Flutter](https://flutter.io)
 
-![ScreenShot](\screenshots\android.png)
+![ScreenShot](/screenshots/android.png)
 
-![ScreenShot](\screenshots\ios.png)
+![ScreenShot](/screenshots/ios.png)
 
 ## Getting Started
 
