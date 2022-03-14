@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Adaptive.scaffold(
-      string: "string", 
+      string: "Version android & IOS", 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
