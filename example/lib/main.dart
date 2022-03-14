@@ -35,8 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
     return Adaptive.scaffold(
       string: "string", 
       body: Center(
-        child: (
-          Adaptive.text(string:" ${Adaptive.isIOS()}", color: Colors.red)
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+          Adaptive.text(string:" ${Adaptive.isIOS()}", color: Colors.red),
+          TextButton(
+            child: Adaptive.text(string: "Press me"),
+            onPressed: (){
+              Adaptive.alert(context: context);
+            } ,
+          )
+
+        
+          ],
         )
       ));
   }
