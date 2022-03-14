@@ -1,3 +1,7 @@
+## [1.0.1] - 2022-03-14
+
+* update README and version
+  
 ## [1.0.0] - 2022-03-14
 
 * Add documentation
