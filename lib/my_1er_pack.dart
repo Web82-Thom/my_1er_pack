@@ -8,8 +8,8 @@ import 'dart:io';
 
 class Adaptive {
   //-----CHECK PLATFORM-----//
-  static bool isIOS() => (Platform.isIOS);
-  // static bool isIOS() => (!Platform.isIOS);
+  // static bool isIOS() => (Platform.isIOS);
+  static bool isIOS() => (!Platform.isIOS);
 
   //-----MATERIAL DESIGN ADAPTED-----//
   static Widget scaffold({@required String? string, @required Widget? body}){
@@ -23,9 +23,13 @@ class Adaptive {
     : androidText(string: string, style: style);
   }
 
-  static Future alert({@required BuildContext? context, }) {
+  static button({@required Widget? child, @required VoidCallback? onPressed }) {
+    return (isIOS() ? iOSButton(child: child, onPressed: onPressed): androidTextButton(child: child, onPressed: onPressed));
+  }
+
+  static Future alert({@required BuildContext? context, @required VoidCallback? callback}) {
     return showDialog(context: context!, builder: (context){
-      return isIOS() ? iOSErrorAlert(context: context): AndroidErrorAlert(context: context);
+      return isIOS() ? iOSErrorAlert(context: context, onPressed: callback): AndroidErrorAlert(context: context, onPressed: callback);
     });
   }
 
@@ -44,7 +48,11 @@ class Adaptive {
     );
   }
 
-  static AndroidErrorAlert({@required BuildContext? context, }){
+  static TextButton androidTextButton({@required Widget? child, @required VoidCallback? onPressed}){
+    return TextButton(onPressed: onPressed, child: child!);
+  }
+
+  static AndroidErrorAlert({@required BuildContext? context, @required VoidCallback? onPressed }){
    return AlertDialog(
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -53,10 +61,11 @@ class Adaptive {
         ],
       ) ,
       actions: <Widget>[
-        TextButton(
-          onPressed: Navigator.of(context!).pop, 
-          child: text(string: "Ok", color: Colors.orange),
-        ),
+        button(
+          child: 
+          text(string: "OK"), 
+          onPressed: onPressed
+        )
       ],
     );
   }
@@ -74,7 +83,12 @@ class Adaptive {
       style: style!,
     );
   }
-  static iOSErrorAlert({@required BuildContext? context}){
+
+  static CupertinoButton iOSButton({@required Widget? child, @required VoidCallback? onPressed}){
+    return CupertinoButton(child: child!, onPressed: onPressed!);
+  }
+
+  static iOSErrorAlert({@required BuildContext? context,@required VoidCallback? onPressed}){
     return CupertinoAlertDialog(
       content: Column(
         children: [
@@ -82,9 +96,7 @@ class Adaptive {
         ],
       ),
       actions: <Widget>[
-        CupertinoButton(child: text(string: "ok"), onPressed: (){
-          Navigator.of(context!).pop();
-        })
+        button(child: text(string: "OK"), onPressed: onPressed)
 
       ],
     );

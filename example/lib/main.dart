@@ -39,11 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
           Adaptive.text(string:" ${Adaptive.isIOS()}", color: Colors.red),
-          TextButton(
-            child: Adaptive.text(string: "Press me"),
+          Adaptive.button(
+            child: Adaptive.text(string:"Press Me"), 
             onPressed: (){
-              Adaptive.alert(context: context);
-            } ,
+              Adaptive.alert(context: context,callback: (){
+                print("Succes");
+                Navigator.of(context).pop();
+              });
+            } 
           )
 
         
