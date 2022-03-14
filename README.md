@@ -9,7 +9,7 @@ Pour utilisé ce package, ajouter au 'pubspec.yam' :
 
 ``` yaml
 dependencies:
-    adaptive_thom_dev:^0.0.1
+    adaptive_thom_dev:^1.0.0
 ```
 ## Usage
 
