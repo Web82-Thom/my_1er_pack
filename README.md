@@ -13,7 +13,7 @@ Pour utilisé ce package, ajouter au 'pubspec.yam' :
 
 ``` yaml
 dependencies:
-    adaptive_thom_dev:^1.0.1
+    adaptive_thom_dev:^1.0.2
 ```
 ## Usage
 
@@ -22,6 +22,33 @@ Dans le fichier Dart, importez:
 ``` dart
 import: 'package:package:adaptive_thom_dev/adaptive_thom_dev.dart';
 ```
+
+Intégrer un Scaffold
+
+
+``` dart
+@override
+  Widget build(BuildContext context) {
+    return Adaptive.scaffold(
+      string: "Switch Android/IOS",
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Adaptive.text(string: "Android et ios", color: Colors.green),
+            Adaptive.button(child: Adaptive.text(string: "Press me", color: Colors.red), 
+            onPressed: (){
+              Adaptive.alert(context: context, callback: (){
+                Navigator.of(context).pop();
+              });
+            })
+          ],
+        ),
+      )
+    );
+  }
+```
+
 
 This project is a starting point for a Flutter application.
 
