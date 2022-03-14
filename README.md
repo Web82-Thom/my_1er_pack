@@ -9,14 +9,14 @@ Pour utilisé ce package, ajouter au 'pubspec.yam' :
 
 ``` yaml
 dependencies:
-    adaptive_ThomDev:^0.0.1
+    adaptive_thom_dev:^0.0.1
 ```
 ## Usage
 
 Dans le fichier Dart, importez:
 
 ``` dart
-import: 'package:package:adaptive_ThomDev/adaptive_ThomDev.dart';
+import: 'package:package:adaptive_thom_dev/adaptive_thom_dev.dart';
 ```
 
 This project is a starting point for a Flutter application.
