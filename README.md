@@ -3,6 +3,10 @@
 Adapation à la plateform utilisé android ou ios.
 Ce package est destiné à la création d'apllication [Flutter](https://flutter.io)
 
+![Scrennshot](\screenshots\android.png)
+
+![Scrennshot](\screenshots\ios.png)
+
 ## Getting Started
 
 Pour utilisé ce package, ajouter au 'pubspec.yam' :
