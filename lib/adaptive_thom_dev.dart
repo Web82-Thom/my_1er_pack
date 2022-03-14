@@ -1,4 +1,4 @@
-library adaptive_ThomDev;
+library adaptive_thom_dev;
 
 import 'dart:ui';
 
